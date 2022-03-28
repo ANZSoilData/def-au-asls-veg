@@ -1,5 +1,5 @@
 # def-au-asls-veg
-Machine-readable representation of the classifiers described in chapter 6 Vegetation, by R.C. McDonald and R.F. Isbell, in Australian soil and land survey field handbook (3rd edn)
+Machine-readable representation of the classifiers described in chapter 6 Vegetation, by R.J. Hnatiuk, R. THackway and J. Walker, in Australian soil and land survey field handbook (3rd edn)
 
 ## Preparing the vocabulary for loading in RVA
 
