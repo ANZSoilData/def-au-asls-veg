@@ -46,6 +46,34 @@ asls:vegetation
   skos:editorialNote "<p>The data was converted from the print representation to this linked-data form by <a href='https://orcid.org/0000-0002-0693-1899'>Linda Gregory</a> and <a href='https://orcid.org/0000-0002-3884-3420'>Simon J D Cox</a></p>"^^rdf:HTML ;
   skos:prefLabel "ASLS Vegetation classifiers" ;
 .
+veg:complexity-complex
+  a skos:Concept ;
+  skos:definition """Forests characteristically showing all or most of the following properties:
+•	The tallest stratum, excluding emergent, has many species.
+•	A large range of structural features, e.g. plant buttresses, spur buttresses, unbuttressed stems, compound leaves, simple leaves, lobed and deeply divided leaves, strap like leaves. 
+•	A large range of growth forms, none of which tends to dominate, e.g. trunk bases usually obscured by climbing pandans, palms, ferns and aroids; robust and slender lianes are present; complex understorey consisting of shrubs, seedlings of larger trees, palms, gingers, pandans and ferns.
+•	The vegetation is not usually arranged into distinguishable, discrete strata.
+•	The stem diameters of the tallest non-emergent trees are usually uneven in size.""" ;
+  skos:notation "C" ;
+  skos:prefLabel "Complex" ;
+.
+veg:complexity-simple
+  a skos:Concept ;
+  skos:definition """Forests showing most or all of the following properties:
+•	The tendency for one or a few species to dominate the canopy, e.g. coachwood or Antarctic beech.
+•	A reduced number of structural features, e.g. plant buttresses absent, or most stems unbuttressed or with star buttresses.
+•	A tendency for one or two growth forms to be more conspicuous, e.g. trunks not usually obscured by climbing plants and epiphytes, but when they do one growth form usually dominates; or understorey layers may have a conspicuous growth form such as a tree fern layer, ground fern layer, shrub or palm layer.
+•	The stem diameters of the canopy trees are usually uniform in size.
+•	Discrete strata, e.g. a tree fern layer, an understorey tree layer or shrubs.""" ;
+  skos:notation "S" ;
+  skos:prefLabel "Simple" ;
+.
+veg:complexity-simple-complex
+  a skos:Concept ;
+  skos:definition "Forests with features of simple and complex forests. Use this category if in doubt or if the vegetation does not possess at least four out of the five properties listed for the other categories." ;
+  skos:notation "X" ;
+  skos:prefLabel "Simple-complex" ;
+.
 veg:cover-D
   a skos:Concept ;
   skos:definition "Crowns touching to overlapping 	Crown separation ratio<0	Crown cover %>80%	Foliage cover %>70%" ;
@@ -130,6 +158,18 @@ veg:cover-abundance-r
   skos:definition "Single individual with small cover" ;
   skos:notation "r" ;
   skos:prefLabel "Insignificant cover" ;
+.
+veg:emergent-non-sclerophyll
+  a skos:Concept ;
+  skos:definition "Common non sclerophyllous rainforest emergents include Agathis, Podocarpus, Araucaria, Flindersia and Erythrina." ;
+  skos:notation "A" ;
+  skos:prefLabel "non-sclerophyllous rainforest emergents " ;
+.
+veg:emergent-sclerophyll
+  a skos:Concept ;
+  skos:definition "Common sclerophyllous emergents over rainforest include species of Eucalyptus, Corymbia, Acacia, Syncarpia, Casuarina, Lophostemon and Melaleuca." ;
+  skos:notation "E" ;
+  skos:prefLabel "sclerophyllous emergents " ;
 .
 veg:formation-cover-abundance
   a skos:Collection ;
@@ -586,6 +626,114 @@ veg:height-9
   skos:notation "9" ;
   skos:prefLabel "Extremely tall (w)" ;
 .
+veg:indicator-growthform-fanpalm
+  a skos:Concept ;
+  skos:definition "Forests in which fan palms (palms with branches spreading out in a fan shape, for example Licuala or Livistona) form a dense/closed stratum (80–100% crown cover) below the tallest stratum. If they form a closed stratum within the upper stratum, it would be registered as the third example in the section ‘Coding tropical/subtropical rainforests’ below" ;
+  skos:notation "3" ;
+  skos:prefLabel "Fan palm" ;
+.
+veg:indicator-growthform-featherpalm
+  a skos:Concept ;
+  skos:definition "Forests in which feather palms (palms, such as coconut palms, with narrow long leaves that appear feather-like from a distance) form a dense/closed (80–100% crown cover) understorey stratum." ;
+  skos:notation "4" ;
+  skos:prefLabel "Feather palm" ;
+.
+veg:indicator-growthform-fern
+  a skos:Concept ;
+  skos:definition "Tree ferns form a dense/closed (80–100% crown cover) and discrete understorey stratum." ;
+  skos:notation "2" ;
+  skos:prefLabel "Fern" ;
+.
+veg:indicator-growthform-moss
+  a skos:Concept ;
+  skos:definition "Forests in which mosses and lichens almost completely replace vascular epiphytes and vines on the trunks and in the crowns." ;
+  skos:notation "1" ;
+  skos:prefLabel "Moss" ;
+.
+veg:indicator-growthform-none
+  a skos:Concept ;
+  skos:definition "If none of the five growth forms above reaches the required level of dominance nominated, the description should record no dominant indicator growth form." ;
+  skos:notation "6" ;
+  skos:prefLabel "Vine" ;
+.
+veg:indicator-growthform-vine
+  a skos:Concept ;
+  skos:definition "Forests in which vines or twining or scrambling plants drape at least 60% of the tallest stratum and emergent trees. " ;
+  skos:notation "5" ;
+  skos:prefLabel "Vine" ;
+.
+veg:leafsize-macrophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >5 macro	
+
+Percentage of individuals in tallest stratum with specified leaf size: >50% macro""" ;
+  skos:notation "1" ;
+  skos:prefLabel "Macrophyll" ;
+.
+veg:leafsize-macrophyll-mesophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: 3-5 macro and 1-4 meso
+
+Percentage of individuals in tallest stratum with specified leaf size: 30-50% macro and 10-40% meso""" ;
+  skos:notation "2" ;
+  skos:prefLabel "Macrophyll-mesophyll" ;
+.
+veg:leafsize-mesophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >5 meso
+
+Percentage of individuals in tallest stratum with specified leaf size: >50% meso""" ;
+  skos:notation "3" ;
+  skos:prefLabel "Mesophyll" ;
+.
+veg:leafsize-mesophyll-notophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >3-5 meso and 1-4 noto
+
+Percentage of individuals in tallest stratum with specified leaf size: 30-50% meso and 10-40% noto""" ;
+  skos:notation "4" ;
+  skos:prefLabel "Mesophyll-notophyll" ;
+.
+veg:leafsize-microphyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >5 micro
+
+Percentage of individuals in tallest stratum with specified leaf size: >50% micro""" ;
+  skos:notation "7" ;
+  skos:prefLabel "Microphyll" ;
+.
+veg:leafsize-microphyll-nanophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: 3-5 micro and 1-4 nano
+
+Percentage of individuals in tallest stratum with specified leaf size: 30-50% micro and 10-40% nano""" ;
+  skos:notation "8" ;
+  skos:prefLabel "Microphyll-nanophyll" ;
+.
+veg:leafsize-nanophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >5 nano
+
+Percentage of individuals in tallest stratum with specified leaf size: >50% nano""" ;
+  skos:notation "9" ;
+  skos:prefLabel "Nanophyll" ;
+.
+veg:leafsize-notophyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: >5 noto
+
+Percentage of individuals in tallest stratum with specified leaf size: >50% noto""" ;
+  skos:notation "5" ;
+  skos:prefLabel "Notophyll" ;
+.
+veg:leafsize-notophyll-microphyll
+  a skos:Concept ;
+  skos:definition """Number of individual trees (maximum 10) with specified leaf sizes	: 3-5 noto and 1-4 micro
+
+Percentage of individuals in tallest stratum with specified leaf size: 30-50% noto and 10-40% micro""" ;
+  skos:notation "6" ;
+  skos:prefLabel "Notophyll-microphyll" ;
+.
 veg:life-form-nw
   a skos:Concept ;
   skos:definition "All other plants with little or no woody tissue are classified as non-woody including annuals, grasses, grass-like plants, forbs, crusts, bryophytes and algae." ;
@@ -619,7 +767,7 @@ veg:rainforest-tropical
   skos:definition "Australian tropical rainforests are situated above 18 latitude while subtropical rainforests are approximately between 18 and 33 latitudes." ;
   skos:member veg:rainforest-tropical-complexity ;
   skos:member veg:rainforest-tropical-emergents ;
-  skos:member veg:rainforest-tropical-growth-form ;
+  skos:member veg:rainforest-tropical-indicator-growthform ;
   skos:member veg:rainforest-tropical-leafsize ;
   skos:member veg:rainforest-tropical-species ;
   skos:prefLabel "Tropical and subtropical rainforests" ;
@@ -627,17 +775,40 @@ veg:rainforest-tropical
 veg:rainforest-tropical-complexity
   a skos:Collection ;
   a sosa:ObservableProperty ;
-  skos:definition "Complexity Tropical and subtropical rainforests of eastern Australia are classified as simple, simple–complex or complex depending on their structural complexity." ;
+  skos:definition "Tropical and subtropical rainforests of eastern Australia are classified as simple, simple–complex or complex depending on their structural complexity." ;
+  skos:member veg:complexity-complex ;
+  skos:member veg:complexity-simple ;
+  skos:member veg:complexity-simple-complex ;
   skos:prefLabel "Tropical rainforest complexity" ;
 .
 veg:rainforest-tropical-emergents
   a skos:Collection ;
   a sosa:ObservableProperty ;
+  skos:definition """Emergents are plants, usually trees, that are clearly above the dominant stratum and whose crown cover is less than 5% of the total crown cover (see ‘Emergents’, page x). Trees that have a greater crown cover and project above a rainforest are coded and named using the standard classification (see Tables 17, 20 and 21).
+
+Record the genus and, if possible, species of emergents followed by the word ‘emergents’. For example: ‘with hoop pine emergents’; ‘with Araucaria emergents’; ‘with Eucalyptus emergents’. If no emergents are present, no qualifying character is nominated.
+
+Emergents are usually identified visually by experienced workers, but are confirmed by actual records of cover.
+
+The crown cover of emergents may exceed 5% of the total crown cover in some instances. For example, in some forest stands Araucaria trees emerge above a closed rainforest canopy with their crown cover exceeding 5% of the total crown cover in some places. These patches should not be classified as separate vegetation types.""" ;
+  skos:member veg:emergent-non-sclerophyll ;
+  skos:member veg:emergent-sclerophyll ;
   skos:prefLabel "Tropical rainforest emergents" ;
 .
-veg:rainforest-tropical-growth-form
+veg:rainforest-tropical-indicator-growthform
   a skos:Collection ;
   a sosa:ObservableProperty ;
+  skos:definition """Many of the simple rainforests and some of the complex and simple–complex rainforests develop strata dominated by particular growth forms. These growth forms are illustrated in Webb et al. (1976). 
+
+Record the growth form name or code as follows.
+
+These terms are inserted before or within the structural formation class: for example ‘tall sparse fern forest’; ‘very tall closed fan palm forest’; ‘low closed vine shrubland’; ‘tall closed feather palm forest’.""" ;
+  skos:member veg:indicator-growthform-fanpalm ;
+  skos:member veg:indicator-growthform-featherpalm ;
+  skos:member veg:indicator-growthform-fern ;
+  skos:member veg:indicator-growthform-moss ;
+  skos:member veg:indicator-growthform-none ;
+  skos:member veg:indicator-growthform-vine ;
   skos:prefLabel "Tropical rainforest indicator growth form" ;
 .
 veg:rainforest-tropical-leafsize
@@ -645,14 +816,53 @@ veg:rainforest-tropical-leafsize
   a sosa:ObservableProperty ;
   skos:definition """Leaf size classes for classifying wet tropical and subtropical rainforests are based on the sizes of the leaves of the tallest stratum trees. Precise calculation of leaf area is not required. 
 
-Record the length and width of a representative sample of canopy leaves (leaves that are exposed to the full sun during their early development, as occurs at the top of the canopy). Numerical values and a field sheet of actual leaf sizes are given in Figure 9; precision greater than the classes shown is not required.""" ;
+Record the length and width of a representative sample of canopy leaves (leaves that are exposed to the full sun during their early development, as occurs at the top of the canopy). Numerical values and a field sheet of actual leaf sizes are given in Figure 9; precision greater than the classes shown is not required.
+
+The forest is described using one of nine terms depending on the proportion of individual trees in the tallest stratum with leaves in each of the leaf size categories (Table 24). Leaf size is assessed by examining leaves from 10 adjacent canopy trees in the sample plot. The following rules should be used:
+•	Where the average leaf size of a tree appears to be intermediate between size classes (for example the leaf length of a lanceolate leaf is approximately 75 mm), the larger size class should be nominated.
+•	Only leaves that are exposed to the sun should be considered. Because these leaves are usually at the top of a tree, a shotgun or catapult may be necessary. An alternative is to locate recently fallen leaves on the ground.
+•	Leaves of palms, aroids and vines should not be considered.
+•	The size of the leaflet of a compound leaf should be considered.
+Two possible, but unlikely, combinations of leaf sizes cannot be described adequately by this scheme. If all leaf sizes are represented equally (20% each), the forest should be described as notophyll. If any three size classes are represented equally (for example 30% macrophyll, 30% mesophyll and 30% notophyll), the intermediate leaf size term mesophyll should be selected.""" ;
+  skos:member veg:leafsize-macrophyll ;
+  skos:member veg:leafsize-macrophyll-mesophyll ;
+  skos:member veg:leafsize-mesophyll ;
+  skos:member veg:leafsize-mesophyll-notophyll ;
+  skos:member veg:leafsize-microphyll ;
+  skos:member veg:leafsize-microphyll-nanophyll ;
+  skos:member veg:leafsize-nanophyll ;
+  skos:member veg:leafsize-notophyll ;
+  skos:member veg:leafsize-notophyll-microphyll ;
   skos:prefLabel "Tropical rainforest leaf size" ;
 .
 veg:rainforest-tropical-species
   a skos:Collection ;
   a sosa:ObservableProperty ;
-  skos:definition "The type of rainforest is named after the most abundant species of the dominant stratum, using the following system." ;
+  skos:definition """The type of rainforest is named after the most abundant species of the dominant stratum, using the following system.
+
+Many rainforest species occur in clusters of five or six trees. Care should be taken to ensure that the species of the tallest stratum are found over a much wider area than a few trees if the species qualifications are used.""" ;
+  skos:member veg:species-mixed ;
+  skos:member veg:species-mixed-plus-one-species ;
+  skos:member veg:species-one-or-two-species ;
   skos:prefLabel "Tropical rainforest species" ;
+.
+veg:species-mixed
+  a skos:Concept ;
+  skos:definition "No one or two species combined make 50% or more of the crown cover in the tallest stratum." ;
+  skos:notation "M" ;
+  skos:prefLabel "Mixed" ;
+.
+veg:species-mixed-plus-one-species
+  a skos:Concept ;
+  skos:definition "Although no species or two species combined make up 50% of the crown cover of the dominant stratum, one species (the one species nominated) is conspicuously abundant. As above, common, generic or specific names can be used except for feather or fan palms (for example Mixed Booyong; Mixed Argyrodendron; Mixed Argyrodendron trifoliolatum or ARTRI). This floristic term can be used to nominate species of particular indicator value to the user." ;
+  skos:notation "X" ;
+  skos:prefLabel "Mixed plus one species" ;
+.
+veg:species-one-or-two-species
+  a skos:Concept ;
+  skos:definition "The one or two species described constitute 50% or more of the crown cover of the tallest stratum. Common, generic or specific names can be used (for example Coachwood–crabapple; Ceratopetalum–Schizomeria; Ceratopetalum apetalum – Schizomeria ovata). Use species name abbreviations for coding (for example CEAPE.SCOVA) except for fan or feather palms, which should not be used as common names because they are used to denote structural features (see ‘Indicator growth forms’ below). Include sclerophyll species if they constitute 50% or more of the crown cover of the tallest stratum." ;
+  skos:notation "S" ;
+  skos:prefLabel "One or two species description" ;
 .
 veg:strata
   a skos:Collection ;
