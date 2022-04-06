@@ -85,47 +85,29 @@ A single site may be assessed from more than one perspective, depending on the f
 Vegetation that is native, non-native or at different growth stages should each have its own benchmark. For native vegetation, the benchmarks should be based on the best examples representing pre-European conditions (sometimes called ‘fully natural’). For vegetation managed for economic production, benchmarks should be based on reference sites with best-practice, fully ecologically sustainable conditions. """ ;
   skos:prefLabel "Condition" ;
 .
-veg:cover-D
-  a skos:Concept ;
-  skos:definition "Crowns touching to overlapping 	Crown separation ratio<0	Crown cover %>80%	Foliage cover %>70%" ;
-  skos:notation "D" ;
-  skos:prefLabel "Closed or dense" ;
-.
-veg:cover-E
-  a skos:Concept ;
-  skos:definition "Emergent 	Crown separation ratio >3	Crown cover % <0.5% of total crown cover	Foliage cover % <3% of total foliage cover" ;
-  skos:notation "E" ;
-  skos:prefLabel "Emergent" ;
-.
-veg:cover-I
-  a skos:Concept ;
-  skos:definition "Isolated plants: for trees about 100 m apart, shrubs about 20 m apart 	Crown separation ratio >20	Crown cover % <0.25%	Foliage cover % <0.20%" ;
-  skos:notation "I" ;
-  skos:prefLabel "Isolated plants" ;
-.
-veg:cover-L
-  a skos:Concept ;
-  skos:definition "Isolated clumps of 2 to many plants about 200 m apart 	Crown separation ratio >20	Crown cover % <0.25%	Foliage cover % <0.20%" ;
-  skos:notation "L" ;
-  skos:prefLabel "Isolated clumps" ;
-.
-veg:cover-M
-  a skos:Concept ;
-  skos:definition "Crowns touching or slightly separated   	Crown separation ratio 0-0.25	Crown cover % 50-80%	Foliage cover % 30-70%" ;
-  skos:notation "M" ;
-  skos:prefLabel "Mid-dense" ;
-.
-veg:cover-S
-  a skos:Concept ;
-  skos:definition "Crowns clearly separated 	Crown separation ratio 0.25-1	Crown cover % 20-50%	Foliage cover % 10-30%" ;
-  skos:notation "S" ;
-  skos:prefLabel "Sparse or open" ;
-.
-veg:cover-V
-  a skos:Concept ;
-  skos:definition "Crowns well separated 	Crown separation ratio 1-20	Crown cover % 0.25-20%	Foliage cover % 0.2-10%" ;
-  skos:notation "V" ;
-  skos:prefLabel "Very sparse" ;
+veg:cover-abundance
+  a skos:Collection ;
+  a sosa:ObservableProperty ;
+  skos:altLabel "Braun-Blanquet cover–abundance scale" ;
+  skos:definition """Cover–abundance combines cover and abundance to estimate the quantity of each species in a vegetation sample. For cover values greater than 5%, the scale is a measure of cover (see above). For cover values less than 5%, it measures abundance, that is, the number of individuals in a defined area.
+
+The Braun-Blanquet cover–abundance scale (Table 19) is the most widely used. It is simple to use, but produces estimates of cover–abundance that are robust for most vegetation classification processes. The system is based on the fact that vegetation is often highly variable and so it is more useful to have many samples to show this variation than to have few precise and time-consuming measures.
+
+Record the cover class code values for the class that represents each species at the sample site.
+
+For the less dense cover classes, imagine moving all individuals into one area and compare that with a reference for the sample site. For example, if the sample site is 400 m2, 5% of the area is 20 m2 (4 m × 5 m), and 1% is 4 m2 (2 m × 2 m).
+
+Although this method provides an absolute value for classes 2–5 (that is, it is a percentage of a defined sample area), the class boundaries are wide and cover is estimated, not measured. Many studies have shown large variations between observers, as well as in one observer’s estimates at different times. Because of these inherent errors, it is important to regularly compare observers if more than one person is making records and to check observations if one person is recording.
+
+In broad-ranging surveys, it is usually better to have large numbers of samples with good cover–abundance estimates, rather than a few precise measures that do not cover the variability of the vegetation. If the objectives of the survey are narrowly focussed and looking for fine levels of discrimination between samples or sampling times, then actual quantitative measurements are more appropriate than class values.""" ;
+  skos:member veg:cover-abundance-1 ;
+  skos:member veg:cover-abundance-2 ;
+  skos:member veg:cover-abundance-3 ;
+  skos:member veg:cover-abundance-4 ;
+  skos:member veg:cover-abundance-5 ;
+  skos:member veg:cover-abundance-cross ;
+  skos:member veg:cover-abundance-r ;
+  skos:prefLabel "Cover abundance" ;
 .
 veg:cover-abundance-1
   a skos:Concept ;
@@ -170,6 +152,126 @@ veg:cover-abundance-r
   skos:notation "r" ;
   skos:prefLabel "Insignificant cover" ;
 .
+veg:cover-class-D
+  a skos:Concept ;
+  skos:definition "Crowns touching to overlapping 	Crown separation ratio<0	Crown cover %>80%	Foliage cover %>70%" ;
+  skos:notation "D" ;
+  skos:prefLabel "Closed or dense" ;
+.
+veg:cover-class-E
+  a skos:Concept ;
+  skos:definition "Emergent 	Crown separation ratio >3	Crown cover % <0.5% of total crown cover	Foliage cover % <3% of total foliage cover" ;
+  skos:notation "E" ;
+  skos:prefLabel "Emergent" ;
+.
+veg:cover-class-I
+  a skos:Concept ;
+  skos:definition "Isolated plants: for trees about 100 m apart, shrubs about 20 m apart 	Crown separation ratio >20	Crown cover % <0.25%	Foliage cover % <0.20%" ;
+  skos:notation "I" ;
+  skos:prefLabel "Isolated plants" ;
+.
+veg:cover-class-L
+  a skos:Concept ;
+  skos:definition "Isolated clumps of 2 to many plants about 200 m apart 	Crown separation ratio >20	Crown cover % <0.25%	Foliage cover % <0.20%" ;
+  skos:notation "L" ;
+  skos:prefLabel "Isolated clumps" ;
+.
+veg:cover-class-M
+  a skos:Concept ;
+  skos:definition "Crowns touching or slightly separated   	Crown separation ratio 0-0.25	Crown cover % 50-80%	Foliage cover % 30-70%" ;
+  skos:notation "M" ;
+  skos:prefLabel "Mid-dense" ;
+.
+veg:cover-class-S
+  a skos:Concept ;
+  skos:definition "Crowns clearly separated 	Crown separation ratio 0.25-1	Crown cover % 20-50%	Foliage cover % 10-30%" ;
+  skos:notation "S" ;
+  skos:prefLabel "Sparse or open" ;
+.
+veg:cover-class-V
+  a skos:Concept ;
+  skos:definition "Crowns well separated 	Crown separation ratio 1-20	Crown cover % 0.25-20%	Foliage cover % 0.2-10%" ;
+  skos:notation "V" ;
+  skos:prefLabel "Very sparse" ;
+.
+veg:crown-cover
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:definition """Crown cover (C) (Walker and Hopkins 1990) is the percentage of the sample site within the vertical projection of the periphery of crowns with crowns considered to be opaque. This is also the generic definition of canopy cover or plant cover. 
+
+To convert between crown separation ratio and crown cover percentage (Table 18), use the following relationship: 
+ 
+Crown cover (%) = k / (1+CSR)^2
+
+The constant k = 80.6 for samples taken along a zigzag transect as shown in Figure 5 (Penridge and Walker 1988).
+
+
+Converting crown cover percentage to foliage cover 
+
+Estimating crown cover percentage assumes the crown is opaque. Converting crown to foliage cover requires that the degree of crown openness be considered. Crown openness can be assessed by matching the photographs in Figure 6 with actual tree crowns.
+
+Foliage cover percentage = crown cover percentage × crown type. 
+
+Examples: 
+
+If CSR is 1.0, crown cover percentage = 20%.
+
+If crown openness (Figure 6) is 60%, 
+then foliage cover percentage = 20% × 60% = 12%.""" ;
+  skos:notation "C" ;
+  skos:note "* The relationship between crown cover and foliage cover is described in more detail in the text." ;
+  skos:prefLabel "Crown cover" ;
+  skos:related veg:crown-separation-ratio ;
+  skos:related veg:foliage-cover ;
+.
+veg:crown-cover-class
+  a skos:Collection ;
+  a sosa:ObservableProperty ;
+  skos:definition "The recorded cover values collected using the methods below can be converted to cover classes as shown in Table 17. Crown cover classes are those used in Walker and Hopkins (1990) and these were selected to coincide as closely as possible with the cover classes of previous classifications, e.g. the projective foliage cover classes of Specht et al. (1974)." ;
+  skos:member veg:cover-class-D ;
+  skos:member veg:cover-class-E ;
+  skos:member veg:cover-class-I ;
+  skos:member veg:cover-class-L ;
+  skos:member veg:cover-class-M ;
+  skos:member veg:cover-class-S ;
+  skos:member veg:cover-class-V ;
+  skos:prefLabel "Crown cover class" ;
+  skos:related veg:crown-cover ;
+  skos:related veg:crown-separation-ratio ;
+  skos:related veg:foliage-cover ;
+.
+veg:crown-separation-ratio
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:definition """Field estimation of the Crown Separation Ratio for discrete crowns 
+
+CSR is the ratio of the mean gap between crowns and the mean crown width, that is:
+
+CSR = (mean gap between crowns/mean crown width)
+
+There are three steps to estimate CSR in the field:
+1.	Sample along a zigzag transect PQ as shown in Figure 5. Start at a crown near P (crown A), and select the next crown encountered going towards or across the transect line, and in the direction P to Q.
+2.	Measure crown widths and crown gaps for each stratum separately irrespective of species. A mean of 12 measurements is usually sufficient.
+3.	Where crowns overlap, the crown gap has a negative value; the greater the overlap, the larger the negative value.
+The method has been shown by Penridge and Walker (1988) to work well whether crowns are regularly spaced, random or clumped. However, they also note limitations that will apply in some field situations. These are:
+•	CSR should be measured for each stratum separately to avoid situations where crowns overlap.
+•	Crown shapes should approximate circles or non-extreme ellipses. Where crown shapes are so irregular that a near-circular equivalent cannot be determined, an alternative method (for example a line-intercept method) should be used to determine cover. For ovoid crowns, average the shortest and longest diameters.
+•	The zigzag method of measurement should be used to avoid long distances between trees, which could invalidate the underlying geometric assumptions of the method.
+
+To convert between crown separation ratio and crown cover percentage (Table 18), use the following relationship: 
+ 
+Crown cover (%) = k / (1+CSR)^2
+
+The constant k = 80.6 for samples taken along a zigzag transect as shown in Figure 5 (Penridge and Walker 1988).""" ;
+  skos:prefLabel "Crown separation ratio" ;
+  skos:related veg:crown-cover ;
+.
+veg:crown-type
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:definition "Estimate the openness of individual tree or shrub crowns by matching the crown with a photograph. The rows show similar crown types for different leaf size (large to small, left to right). Acacia phyllodes is in the right hand column. Most Australian woody plants are in the range 40–70%." ;
+  skos:prefLabel "Crown type" ;
+.
 veg:emergent-non-sclerophyll
   a skos:Concept ;
   skos:definition "Common non sclerophyllous rainforest emergents include Agathis, Podocarpus, Araucaria, Flindersia and Erythrina." ;
@@ -182,37 +284,61 @@ veg:emergent-sclerophyll
   skos:notation "E" ;
   skos:prefLabel "sclerophyllous emergents " ;
 .
-veg:formation-cover-abundance
-  a skos:Collection ;
-  skos:definition """Cover–abundance combines cover and abundance to estimate the quantity of each species in a vegetation sample. For cover values greater than 5%, the scale is a measure of cover (see above). For cover values less than 5%, it measures abundance, that is, the number of individuals in a defined area.
-
-The Braun-Blanquet cover–abundance scale (Table 19) is the most widely used. It is simple to use, but produces estimates of cover–abundance that are robust for most vegetation classification processes. The system is based on the fact that vegetation is often highly variable and so it is more useful to have many samples to show this variation than to have few precise and time-consuming measures.
-
-Record the cover class code values for the class that represents each species at the sample site.""" ;
-  skos:member veg:cover-abundance-1 ;
-  skos:member veg:cover-abundance-2 ;
-  skos:member veg:cover-abundance-3 ;
-  skos:member veg:cover-abundance-4 ;
-  skos:member veg:cover-abundance-5 ;
-  skos:member veg:cover-abundance-cross ;
-  skos:member veg:cover-abundance-r ;
-  skos:prefLabel "Braun-Blanquet cover–abundance scale " ;
+veg:emergent-taxon
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "Emergent taxon" ;
 .
-veg:formation-cover-crown
+veg:emergents
   a skos:Collection ;
-  skos:definition "The recorded cover values collected using the methods below can be converted to cover classes as shown in Table 17. Crown cover classes are those used in Walker and Hopkins (1990) and these were selected to coincide as closely as possible with the cover classes of previous classifications, e.g. the projective foliage cover classes of Specht et al. (1974)." ;
-  skos:member veg:cover-D ;
-  skos:member veg:cover-E ;
-  skos:member veg:cover-I ;
-  skos:member veg:cover-L ;
-  skos:member veg:cover-M ;
-  skos:member veg:cover-S ;
-  skos:member veg:cover-V ;
+  skos:definition """Some plants can rise above the level of the dominant stratum and because their total cover is small, they are considered to be emergents rather than a separate stratum. As a guideline, emergents are recognised if their foliage cover is less than 5% of the crown cover of the dominant stratum (see Figure 8 for a tree example). Care is needed in classifying tall plants as emergents, and the 5% guideline can be expected to vary depending on vegetation type and season – especially if the ground layer is the dominant stratum. In some borderline cases, taller plants can occur over a lower stratum that elsewhere forms the dominant stratum of a well-known vegetation type. In this situation it is acceptable to continue to call the tallest stratum emergents where it is considered unhelpful to create a new vegetation type solely on the basis of the unusually slightly higher cover of the tallest plants.
+
+Record the total crown cover percentage, median height and/or maximum height, and the genus (and species if possible) of the emergent layer. Measure height and cover as for other plant attributes described earlier.
+
+When the tallest stratum is not the most significant stratum, the guidelines vary for different kinds of vegetation as follows. 
+•	Where the vegetation is dominated by trees or shrubs, and the tallest layer emerges above a dominant canopy (that is, cover >5%) and has generally less than 5% total cover, then the tallest trees or shrubs are called emergents. The genus or species of emergents should be recorded, if possible, followed by the word ‘emergents’: for example ‘with hoop pine emergents’; ‘with Araucaria emergents’; ‘with Eucalyptus emergents’. 
+•	Where the vegetation is dominated by perennial grasses, for example Triodia, and a taller layer of woody plants emerges above it with less than 5% of the Triodia cover, then the tallest plants are called emergents and should be named as in the example above.
+•	Where the vegetation is seasonally or sporadically dominated by annual plants in a mix of perennial plants that form a taller layer, then in most cases the dominant layer is the taller perennial layer. For example, ‘sparse eucalypt trees with seasonally dominant Sorghum in the understorey’ or ‘sparse acacia trees with periodically dominant annual herbs of Asteraceae and other families’. 
+•	For ephemeral wetlands, where the dominant layer is only present periodically and there is no taller woody layer, the dominant layer is the ephemeral layer. It is recorded as ephemeral, for example: ‘ephemeral mixed herbs’.""" ;
+  skos:member veg:crown-cover ;
+  skos:member veg:emergent-taxon ;
+  skos:member veg:maximum-height ;
+  skos:member veg:median-height ;
+  skos:prefLabel "Emergents" ;
+.
+veg:foliage-cover
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:definition """Foliage cover (Carnahan 1977, Walker and Hopkins 1990) is the percentage of the sample site occupied by the vertical projection of foliage and woody branches.
+
+Converting crown cover percentage to foliage cover 
+
+Estimating crown cover percentage assumes the crown is opaque. Converting crown to foliage cover requires that the degree of crown openness be considered. Crown openness can be assessed by matching the photographs in Figure 6 with actual tree crowns.
+
+Foliage cover percentage = crown cover percentage × crown type. 
+
+Examples: 
+
+If CSR is 1.0, crown cover percentage = 20%.
+
+If crown openness (Figure 6) is 60%, 
+then foliage cover percentage = 20% × 60% = 12%.""" ;
+  skos:narrower veg:foliage-cover-projected ;
+  skos:notation "FC" ;
   skos:note "* The relationship between crown cover and foliage cover is described in more detail in the text." ;
-  skos:prefLabel "Cover and crown type" ;
+  skos:prefLabel "Foliage cover" ;
+  skos:related veg:crown-cover ;
+  skos:related veg:crown-type ;
+.
+veg:foliage-cover-projected
+  a skos:Concept ;
+  skos:definition "Projective foliage cover (PFC) (Specht et al. 1974) is the percentage of the sample site occupied by the vertical projection of foliage only." ;
+  skos:notation "PFC" ;
+  skos:prefLabel "Projected foliage cover" ;
 .
 veg:formation-growthform
   a skos:Collection ;
+  a sosa:ObservableProperty ;
   skos:definition "At Level 1, only two life forms exist (woody plants or non-woody plants). In contrast, at Level 2, many more detailed categories of growth forms are used. The term growth form is used in a broad sense to describe the form or shape of individual plants (e.g. tree, shrub) or Australian broad floristic land cover types (e.g. native vegetation such as mallee, chenopod shrub; or non-native vegetation such as wheat fields, orchards). The following glossary (modified from ESCAVI 2003) defines the growth forms for structural formations." ;
   skos:member veg:growth-form-a10 ;
   skos:member veg:growth-form-a20 ;
@@ -260,7 +386,9 @@ veg:formation-height
   a skos:Collection ;
   a sosa:ObservableProperty ;
   skos:definition """In the field, actual height measurements should be made, not estimates of height classes. Height can be measured using measuring tapes or poles for low vegetation. Clinometers, laser or sonic ranging instruments, visual sighting instruments or LIDAR can be used for tall vegetation (see Brack 1998 and Abed and Stephens 2003). Inaccuracy in measurements increases as crown closure and height increases. 
+
 Record the height from the ground to the highest part of the plant above ground. Where the height of flower stalks (for example in grasses, grass trees) or leaves (for example in palms, cycads, grass trees, tree ferns) add significantly to plant height and contribute significantly to a stratum, then record two measurements: total height from ground level to the top of the highest part of the plant, and height from ground level to the top of the leaves (e.g. Xanthorrhoea johnsonii 2.5 m/1.3 m; Sorghum intrans 1.9 m/1.3 m). This provides an accurate record and allows various uses in analysis. 
+
 The recorded heights can then be converted to height classes as shown in Table 20.""" ;
   skos:member veg:height-0 ;
   skos:member veg:height-1 ;
@@ -277,22 +405,70 @@ The recorded heights can then be converted to height classes as shown in Table 2
 .
 veg:formation-level-1
   a skos:Collection ;
-  skos:member veg:formation-cover-abundance ;
-  skos:member veg:formation-cover-crown ;
-  skos:member veg:formation-life-forms ;
+  skos:definition """The three commonly used field measures of cover are crown cover, foliage cover and projective foliage cover. Each gives different values and none is correlated in a simple way with leaf area or leaf area index.
+
+PFC and foliage cover for plants are sensitive to season and drought because foliage may change greatly depending on the water available. This variation is not usually considered in vegetation classification. 
+
+Crown cover is the recommended method for reporting cover for plants with discrete crowns and these are usually over about 1.0 m high. Foliage cover can be estimated from crown cover. This approach avoids the problem of variability due to season or water availability. Cover can be estimated both in the field and from large scale aerial photographs. Crown cover percentage is estimated using the crown separation ratio (CSR) developed by Walker, Crapper and Penridge (1988) and Penridge and Walker (1988). However, CSR is not reliable if crowns deviate significantly from circular or slightly oval (for example in forests with a significant cover of Corymbia that have very irregular and interlocking shapes).
+
+Ground cover can be estimated by measuring the distance covered by the vertical projection of the leaves and woody branches onto a tape measure and expressing this as a percentage of the total length. This is a line-intercept method.
+
+Cover class for a particular stratum can be quickly assessed based on whether the crowns are touching, well separated, etc. However, because primary data such as actual crown cover percentage are usually more valuable than pre-classified data, a method to accurately estimate the crown separation ratio is needed.""" ;
+  skos:member veg:cover-abundance ;
+  skos:member veg:crown-cover ;
+  skos:member veg:crown-cover-class ;
+  skos:member veg:crown-separation-ratio ;
+  skos:member veg:crown-type ;
+  skos:member veg:foliage-cover ;
+  skos:member veg:foliage-cover-projected ;
+  skos:member veg:ground-cover ;
+  skos:member veg:ground-cover-class ;
+  skos:member veg:life-form ;
   skos:prefLabel "Formation (Level 1)" ;
 .
 veg:formation-level-2
   a skos:Collection ;
+  skos:member veg:cover-abundance ;
+  skos:member veg:crown-cover ;
+  skos:member veg:crown-cover-class ;
+  skos:member veg:crown-separation-ratio ;
+  skos:member veg:crown-type ;
+  skos:member veg:emergents ;
+  skos:member veg:foliage-cover ;
+  skos:member veg:foliage-cover-projected ;
   skos:member veg:formation-growthform ;
+  skos:member veg:formation-height ;
+  skos:member veg:ground-cover ;
+  skos:member veg:ground-cover-class ;
   skos:prefLabel "Structural Formation (Level 2)" ;
 .
-veg:formation-life-forms
+veg:ground-cover
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:definition """Ground cover can be estimated by measuring the distance covered by the vertical projection of the leaves and woody branches onto a tape measure and expressing this as a percentage of the total length. This is a line-intercept method.
+
+The ground layer normally comprises low shrubs, grasses, forbs, rushes, sedges etc., and it is necessary, in this classification, to estimate the foliage cover as a vertical projection. For many purposes a visual estimate will suffice to place the ground cover into a cover class (Table 17). Foliage cover of the ground layer may be accurately estimated using point quadrats or foliar intercepts along transects. A rapid field method uses foliar intercepts along a 30 m tape laid out within the sample site (Figure 7).
+
+The method is intended for use in grass and low shrubs. Looking vertically down onto the tape and foliage, the amount of foliage intercepted along the tape is estimated, and expressed as a percentage of the transect length. It is easiest to estimate and record the amount of foliage intercepted per metre of tape and add these amounts at the completion of the transect.
+
+Two to four transects are usually needed per site depending on cover variability. For grass, a 10 m transect is usually enough; for small shrubs, 20 m. A longer transect will be needed where the ground layer is more patchy. In some situations – for example rangeland environments where the formation class may require subdivision – it is often useful to collect information about basal area and/or plant density and to record a number of cover classes in the <10% foliage cover class. Transects should be located independently of the ground layer so that the sample is not biased. The starting point and direction can be fixed in relation to some aspect of the plot or can be determined by using random numbers to locate the starting point and bearing.""" ;
+  skos:prefLabel "Ground cover" ;
+.
+veg:ground-cover-class
   a skos:Collection ;
-  skos:definition "Life form describes what a plant looks like. At the most general level of classification, formations, there are only two life forms: " ;
-  skos:member veg:life-form-nw ;
-  skos:member veg:life-form-w ;
-  skos:prefLabel "Life form" ;
+  a sosa:ObservableProperty ;
+  skos:definition "The ground layer normally comprises low shrubs, grasses, forbs, rushes, sedges etc., and it is necessary, in this classification, to estimate the foliage cover as a vertical projection. For many purposes a visual estimate will suffice to place the ground cover into a cover class (Table 17). " ;
+  skos:member veg:cover-class-D ;
+  skos:member veg:cover-class-E ;
+  skos:member veg:cover-class-I ;
+  skos:member veg:cover-class-L ;
+  skos:member veg:cover-class-M ;
+  skos:member veg:cover-class-S ;
+  skos:member veg:cover-class-V ;
+  skos:prefLabel "Ground cover class" ;
+  skos:related veg:crown-cover ;
+  skos:related veg:crown-separation-ratio ;
+  skos:related veg:foliage-cover ;
 .
 veg:growth-form-a10
   a skos:Concept ;
@@ -810,6 +986,14 @@ Percentage of individuals in tallest stratum with specified leaf size: 30-50% no
   skos:notation "6" ;
   skos:prefLabel "Notophyll-microphyll" ;
 .
+veg:life-form
+  a skos:Collection ;
+  a sosa:ObservableProperty ;
+  skos:definition "Life form describes what a plant looks like. At the most general level of classification, formations, there are only two life forms: " ;
+  skos:member veg:life-form-nw ;
+  skos:member veg:life-form-w ;
+  skos:prefLabel "Life form" ;
+.
 veg:life-form-nw
   a skos:Concept ;
   skos:definition "All other plants with little or no woody tissue are classified as non-woody including annuals, grasses, grass-like plants, forbs, crusts, bryophytes and algae." ;
@@ -821,6 +1005,15 @@ veg:life-form-w
   skos:definition "Woody plants include all trees, palms, arborescent cycads, tree ferns, xanthorrhoeas, shrubs and woody vines. " ;
   skos:notation "w" ;
   skos:prefLabel "woody plants" ;
+.
+veg:maximum-height
+  a skos:Concept ;
+  skos:prefLabel "Maximum height" ;
+.
+veg:median-height
+  a skos:Concept ;
+  a sosa:ObservableProperty ;
+  skos:prefLabel "Median height" ;
 .
 veg:montane
   a skos:Concept ;
@@ -999,19 +1192,38 @@ veg:strata
   a skos:Collection ;
   skos:definition """A stratum is an easily seen layer of foliage and branches of a measurable height. Vegetation can have one or more strata. A single stratum may extend from the top of the canopy to near ground level. Record the median height of the top of each stratum in metres (see Figure 8). If foliage profiles are required for the habitat studied, also record the depth of the crowns in each stratum. Strata are named as follows:
 
-At times it will be useful to record subdivisions of the three main strata. These sub-strata occur when a major stratum is composed of two or more different elements. For example, the dominant stratum may consist of one species that makes up most of the canopy, but its lower limit is made up mostly of a different species, a co-dominant. In such cases, separate strata do not really exist, but recognising a sub-stratum may make it possible to elucidate a significant aspect of the vegetation (for example development stage or species mixtures).""" ;
-  skos:member veg:cover-E ;
+At times it will be useful to record subdivisions of the three main strata. These sub-strata occur when a major stratum is composed of two or more different elements. For example, the dominant stratum may consist of one species that makes up most of the canopy, but its lower limit is made up mostly of a different species, a co-dominant. In such cases, separate strata do not really exist, but recognising a sub-stratum may make it possible to elucidate a significant aspect of the vegetation (for example development stage or species mixtures).
+
+Complex canopies due to regrowth
+
+Vegetation that has been disturbed or is still recovering from certain kinds of disturbance can produce complex canopies. For example, where a canopy has been reduced – but not totally removed – by clearing, ringbarking or poisoning, two or more cohorts of canopy species may occur. When of clearly different ages, the cohorts are also likely to differ in height, making the description of the canopy difficult.
+
+The methods already described for defining dominant stratum and emergents should be applied to these situations. This type of vegetation can be further characterised by recording ‘uneven age’ when assessing growth stage (Table 28). The different cohorts should not be amalgamated unless they are too similar in structure to be distinguished consistently. Arbitrary height boundaries should not be used to separate them.""" ;
+  skos:member veg:stratum-E ;
   skos:member veg:stratum-G ;
-  skos:member veg:stratum-M1 ;
-  skos:member veg:stratum-M2 ;
+  skos:member veg:stratum-M ;
   skos:member veg:stratum-U ;
   skos:prefLabel "Recognising strata" ;
+.
+veg:stratum-E
+  a skos:Concept ;
+  skos:definition "The tallest plants in some vegetation are so sparse that they no longer form the dominant or most significant layer. For example, a few tall Araucaria or Eucalyptus trees may rise above a closed rainforest canopy, or widely scattered eucalypts or acacias may rise above lower shrubs or grasses in semiarid regions. The tallest stratum is then classified as an ‘emergent layer’ (see the later section ‘Emergents’ on page xx for definition and discussion) and the dominant layer on which the vegetation will be classified is usually the next tallest layer." ;
+  skos:notation "E" ;
+  skos:prefLabel "Emergent" ;
 .
 veg:stratum-G
   a skos:Concept ;
   skos:definition "can also be the dominant stratum, for example in places where grass cover is closed and trees are very sparse. There is no mandatory height limit on the ground layer, but it is usually less than 2.0 m tall. " ;
   skos:notation "G" ;
   skos:prefLabel "Ground stratum" ;
+.
+veg:stratum-M
+  a skos:Concept ;
+  skos:definition "contains the plants with the greatest above-ground biomass. In most cases, the tallest stratum will also be the dominant stratum. Emergents are an exception (see below)." ;
+  skos:narrower veg:stratum-M1 ;
+  skos:narrower veg:stratum-M2 ;
+  skos:notation "M" ;
+  skos:prefLabel "Mid-stratum" ;
 .
 veg:stratum-M1
   a skos:Concept ;
