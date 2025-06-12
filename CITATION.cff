@@ -1,15 +1,15 @@
-  cff-version: 1.2.0
+cff-version: 1.2.0
 message: "If you use this dataset, please cite it as below."
 authors:
-  - family-names: Cox
-    given-names: Simon
-    orcid: https://orcid.org/0000-0002-3884-3420
+- family-names: Cox
+  given-names: Simon
+  orcid: https://orcid.org/0000-0002-3884-3420
 title: "Machine-readable representation of Vegetation Classifiers from the Australian soil and land survey field handbook (3rd edn)"
 version: 1.0.0
 identifiers:
-  - type: doi
-    value: 
-url: https://github.com/ANZSoilData/def-au-asls-veg
+- type: doi
+  value: 
+url: "https://github.com/ANZSoilData/def-au-asls-veg"
 date-released: 2025-05-18
 license: CC0
 license-url: https://creativecommons.org/choose/zero/
