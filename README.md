@@ -1,3 +1,5 @@
+Cite as: ![image](https://github.com/user-attachments/assets/be48b95b-6de3-402e-a697-b0ea80a911cb)
+
 # def-au-asls-veg
 Machine-readable representation of the classifiers described in chapter 6 Vegetation, by R.J. Hnatiuk, R. THackway and J. Walker, in Australian soil and land survey field handbook (3rd edn)
 
