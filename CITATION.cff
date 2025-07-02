@@ -1,15 +1,24 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
-message: "If you use this dataset, please cite it as below."
+title: >-
+  Machine-readable representation (Resource Description format, RDF) of the classifiers for Vegetation - the Australian Soil and Land Survey Field Handbook (3rd edn).
+message: >-
+  If you use this dataset, please cite it using the metadata from this file.
+type: dataset
 authors:
-  - family-names: Cox
-    given-names: Simon
-    orcid: https://orcid.org/0000-0002-3884-3420
-title: "Machine-readable representation of Vegetation Classifiers from the Australian soil and land survey field handbook (3rd edn)"
-version: 1.0.0
-doi:  
-url: https://github.com/ANZSoilData/def-au-asls-veg
-date-released: 2025-05-18
-license: CC0
-license-url: https://creativecommons.org/choose/zero/
-abstract: >
-  Machine-readable representation of the classifiers described in chapter 6 Vegetation, by R.J. Hnatiuk, R. THackway and J. Walker, in Australian soil and land survey field handbook (3rd edn)
+  - given-names: Simon
+    family-names: Cox
+    orcid: 'https://orcid.org/0000-0002-3884-3420'
+repository-code: 'https://github.com/ANZSoilData/def-au-asls-vegetation'
+repository: 'https://vocabs.ardc.edu.au'
+abstract: >-
+  Machine-readable representation of the classifiers described in  classifiers described in 6 Vegetation, by R.J. Hnatiuk, R. THackway and J. Walker, in Australian soil and land survey field handbook (3rd edn)
+keywords:
+  - vegetation
+  - linked data
+  - vocabularies
+license: CC-BY-1.0
+version: 1.0.1
+date-released: '2025-15-18'
